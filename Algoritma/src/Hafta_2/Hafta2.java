@@ -5,7 +5,7 @@ import java.lang.reflect.Array;
 public class Hafta2 {
 
 	
-	public static boolean isUnique(int[] Array) {
+/*	public static boolean isUnique(int[] Array) {
 		boolean flag=true;
 		for(int i=0;i<Array.length;i++) {
 			for(int j=i+1;j<Array.length;j++) {
@@ -16,13 +16,27 @@ public class Hafta2 {
 		}
 		
 		return flag;
+	}*/
+	
+	
+	public static boolean denesdirme(int[] A) {
+		boolean bayrak=true;
+		for(int i=0;i<A.length;i++) {
+			for(int j=i+1;j<A.length;j++) {
+				if(A[i]==A[j]) {
+					bayrak=false;
+				}
+			}
+		}
+		
+		return bayrak;
+		
 	}
 	
 	public static boolean isSorted(double[] Array) {
 		boolean flag=true;
 		for(int i=0;i<Array.length;i++) {
-			for(int j=i+1;j<Array.length;j++) {
-				
+			for(int j=i+1;j<Array.length;j++) {		
 				if(Array[i]>Array[j]) {
 					flag=false;
 				}
@@ -70,7 +84,7 @@ public class Hafta2 {
     return decimalNo%2+(writeBinary(decimalNo/2)*10);
 	     
 	}
-	
+	 
 	public static int factorial(int number) {
 		
 		if(number==1) {
@@ -83,9 +97,8 @@ public class Hafta2 {
 	
 	public static void main(String[] args) {
 
-	 System.out.println(writeBinary(5));
-	 System.out.println(factorial(4));
-	 System.out.println(fibonacci(3));
+	
+		System.out.println(fibonacci(10));
 	}
 }
 
